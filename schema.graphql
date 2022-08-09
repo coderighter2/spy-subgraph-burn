@@ -1,6 +1,14 @@
-type ExampleEntity @entity {
+type Burn @entity {
   id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
+  index: Int!
+  amount: BigInt!
+  creationTime: BigInt!
+  from: Bytes! # address
+  txid: Bytes!
+}
+
+type Info @entity {
+  id: ID!
+  totalAmount: BigInt!
+  count: Int!
 }
